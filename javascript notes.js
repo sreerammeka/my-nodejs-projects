@@ -1,8 +1,11 @@
 //Javascript frameworks
 
 
-//**For Developing backend services, we use NodeJS, ExpressJS */
+//**For Developing backend services, we use NodeJS, ExpressJS, same as like Java, .NET */
 //**For Developin front end (UI), we need HTML, CSS, AngularJS, ReactJS, VueJS */
+
+//***GraphQL */
+//GraphQL developed by Facebook, which helps in designing the number of endpoints to be specified in your app
 
 //Node JS
 
@@ -23,6 +26,7 @@
 //website is npmjs.org
 
 
+//Ember JS??
 
 //Boostrap
 //Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation and other interface components.
@@ -65,3 +69,9 @@
 // Useful libraries
 
 //To store variables, use "var", "const", "let"
+
+
+//Response codes
+//304 NOT MODIFIED- will occur when cache is used to display the response (disabling cache will provide a 200 OK response)
+//200 OK- resource exists and is found
+//404 RESOURCE NOT FOUND- resource doesn't exist, so throw a resource not found error

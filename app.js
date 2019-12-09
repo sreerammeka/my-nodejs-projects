@@ -8,6 +8,11 @@
 const express = require('express')
 const app = express();
 
+const courses = [
+{id:1, name: 'course1'},
+{id:2, name: 'course2'},
+{id:3, name: 'course3'},
+];
 
  app.get('/', (req, res) =>{
     res.send('Player 1');
@@ -16,14 +21,23 @@ const app = express();
 
  app.get('/api/courses', (req, res) =>{
     // res.send('Player 1');
-    res.send([1, 2, 4, 5, 7, 9, 10, 12, 15]);
+   //  res.send([1, 2, 4, 5, 7, 9, 10, 12, 15]);
+
+   //display courses array
+   res.send(courses);
  } );
 
  app.get('/api/courses/:id', (req, res) =>{
     // res.send('Player 1');
     //print the API endpoint on the screen
+    
     //http://localhost:8080/api/courses/7 print 7 on the screen 
-    res.send(req.params.id);
+   //  res.send(req.params.id);
+
+   //find the course with the course id, if it's not found then send a 404 response with a message to the user
+   const course = courses.find(c => c.id === parseInt(req.params.id));
+   if (!course) res.status(404).send("The course with the given course ID was not found")
+   res.send(course);
  } );
 
  app.get('/api/courses/:year/:month', (req, res) =>{
